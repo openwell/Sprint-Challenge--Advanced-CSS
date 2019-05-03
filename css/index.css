@@ -318,11 +318,3 @@ footer {
   height: auto;
   border-radius: 10px;
 }
-.home .subscription_section {
-  text-align: center;
-  background-color: aqua;
-}
-.home .subscription_section input {
-  width: 50%;
-  background-color: aqua;
-}
