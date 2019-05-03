@@ -1,29 +1,42 @@
 // Home Content
 
 .home {
-
   .intro {
-
     h2 {
       padding: 15px;
     }
+    div {
+      width: 100%;
+      img {
+        width: 100%;
+        border-radius: 5px;
+      }
+    }
 
     p {
-      padding:0 15px;
+      padding: 0 15px;
     }
-  
   }
 
   .space-images {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @phone {
+      flex-direction: column;
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @phone {
+        width: 95%;
+        &:not(:first-child) {
+          display: none;
+        }
+      }
     }
   }
 
@@ -43,11 +56,17 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    .flex-center();
+    @media @phone {
+      flex-direction: column-reverse;
+      padding: 5px 5px;
+    }
 
     .walk-text {
       width: 50%;
+      @media @phone {
+        width: 100%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,13 +77,28 @@
       }
 
       .btn {
+        button {
+          .signUp-btn(@btn-bg-color, @wild-sand);
+          transition: background-color 1s, color 1s;
+          &:hover {
+            background-color: @wild-sand;
+            color: @btn-bg-color;
+            cursor: pointer;
+          }
+          @media @phone {
+            width: 100%;
+            .padding-ftSize(20px, 1.5rem);
+          }
+        }
       }
     }
-
     .walk-img {
       width: 46%;
       margin-left: 4%;
-      
+      @media @phone {
+        width: 95%;
+        margin-left: 2%;
+      }
       img {
         width: 100%;
         height: auto;
@@ -72,4 +106,12 @@
       }
     }
   }
-}// home
+  // .subscription_section {
+  //   text-align: center;
+  //   background-color: aqua;
+  //   input {
+  //     width: 50%;
+  //     background-color: aqua;
+  //   }
+  // }
+} // home
