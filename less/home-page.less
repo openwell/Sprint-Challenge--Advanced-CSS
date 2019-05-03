@@ -56,8 +56,7 @@
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
-    display: flex;
-    justify-content: center;
+    .flex-center();
     @media @phone {
       flex-direction: column-reverse;
       padding: 5px 5px;
@@ -79,22 +78,16 @@
 
       .btn {
         button {
-          padding: 10px 20px 5px 20px;
-          border-radius: 5px;
-          font-size: 2rem;
-          font-weight: bold;
-          background-color: #222839;
-          color: @wild-sand;
+          .signUp-btn(@btn-bg-color, @wild-sand);
           transition: background-color 1s, color 1s;
           &:hover {
             background-color: @wild-sand;
-            color: #222839;
+            color: @btn-bg-color;
             cursor: pointer;
           }
           @media @phone {
             width: 100%;
-            font-size: 1.5rem;
-            padding: 20px;
+            .padding-ftSize(20px, 1.5rem);
           }
         }
       }
@@ -111,6 +104,14 @@
         height: auto;
         border-radius: 10px;
       }
+    }
+  }
+  .subscription_section {
+    text-align: center;
+    background-color: aqua;
+    input {
+      width: 50%;
+      background-color: aqua;
     }
   }
 } // home

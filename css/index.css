@@ -173,8 +173,8 @@ p {
   background-color: #F6F6F6;
 }
 .header-section h1 {
-  font-size: 4rem;
   padding: 10px;
+  font-size: 4rem;
 }
 @media (max-width: 500px) {
   .header-section h1 {
@@ -287,20 +287,20 @@ footer {
   border-radius: 5px;
   font-size: 2rem;
   font-weight: bold;
-  background-color: #222839;
+  background-color: #22283A;
   color: #F6F6F6;
   transition: background-color 1s, color 1s;
 }
 .home .walk .walk-text .btn button:hover {
   background-color: #F6F6F6;
-  color: #222839;
+  color: #22283A;
   cursor: pointer;
 }
 @media (max-width: 500px) {
   .home .walk .walk-text .btn button {
     width: 100%;
-    font-size: 1.5rem;
     padding: 20px;
+    font-size: 1.5rem;
   }
 }
 .home .walk .walk-img {
@@ -317,4 +317,12 @@ footer {
   width: 100%;
   height: auto;
   border-radius: 10px;
+}
+.home .subscription_section {
+  text-align: center;
+  background-color: aqua;
+}
+.home .subscription_section input {
+  width: 50%;
+  background-color: aqua;
 }
